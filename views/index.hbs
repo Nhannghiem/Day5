@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="into.css">
+    <title> Document</title>
+</head>
+<body>
+    <header >
+       <hl> hello</hl>
+    </header>
+    
+    
+    <div class="inText">                               
+    <form action="/insert" method="post">
+    Name
+    <input type="text" name="txtName" placeholder="Enter Name">
+    <br>
+    Tuoi <input type="text" name="txtTuoi" placeholder="Enter age">
+    <br>
+    Picture  <input type="text" name="txtPicture">
+    <br>
+    <input type="submit" value="Insert Student"> 
+    
+    </form>
+    </div>
+    <article>
+              <h1 style="color:blue; text-align: center;" >List</h1>
+       <table>
+         <tr style="color: aquamarine;">
+             <th> Picture</th>
+             <th> Name</th>
+             <th>Age</th>
+             <th>Delete</th>
+             <th>Edit</th>
+         </tr>
+     {{#each model}}
+          <tr>
+              
+             <td> <img src="{{picture}}" width="150" height="100"> </td>
+             <td>  {{name}} </td>
+             <td> {{tuoi}} </td>
+             <td><a href="/delete?id={{_id}}" >Delete</a></td>
+             <td><a href="/edit?id={{_id}}">Edit</a></td>
+            
+         </tr>
+        {{/each}}
+
+   </table>
+    </article>
+   
+    <form action="/search" method="post">
+    <input type="text" name="txtSearch">
+    <br>
+    <input type="submit" value="Search">
+    
+    </form>
+   
+    <footer>
+        <p>nhan</p>
+    </footer>
+</body>
+</html>

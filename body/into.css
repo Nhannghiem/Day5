@@ -1,0 +1,40 @@
+header {
+    color: blueviolet;
+    font-size: 2cm;
+    text-align: center;
+    background-color: aquamarine;
+    padding: 20px;
+}
+
+
+
+.inText{
+    
+    padding: 12px 10px;
+    border: 1px solid chocolate;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 5px 0;
+    
+}
+
+article {
+    float: right;
+    padding: 1px 2px;
+   width: 80%; 
+   
+  }
+td, th {
+    border: 1px solid #0ca1a1;
+    text-align: left;
+    padding: 8px;
+    
+  }
+  tr:nth-child(even) {
+    background-color: #3b9162;
+  }
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
